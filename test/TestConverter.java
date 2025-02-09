@@ -10,9 +10,9 @@ public class TestConverter {
         assertEquals("HEJSAN  JAG  HETER  MORSE", converter.convertMorseToAlphabet(".... . .--- ... .- -.   .--- .- --.   .... . - . .-.   -- --- .-. ... . "));
     }
     @Test
-    public void testConversionToAlphabet() {
+    public void testConversionToMorseWords() {
         Converter converter = new Converter();
-        assertEquals("A", converter.convertMorseToAlphabet(".-"));
+        assertEquals(".... . .--- ... .- -.     .--- .- --.     .... . - . .-.     -- --- .-. ... . ", converter.convertAlphabetToMorse("HEJSAN  JAG  HETER  MORSE"));
     }
 
     @Test
@@ -30,6 +30,6 @@ public class TestConverter {
     @Test
     public void testUnknownChar() {
         Converter converter = new Converter();
-        assertEquals("? ", converter.convertAlphabetToMorse("@"));
+        assertEquals("? ", converter.convertAlphabetToMorse("Å"));
     }
 }
